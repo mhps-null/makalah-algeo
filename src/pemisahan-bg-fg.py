@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture("test.mp4")
+cap = cv2.VideoCapture("data/test.mp4")
 if not cap.isOpened():
     raise RuntimeError("Video gagal dibuka. Path / codec bermasalah.")
 
@@ -50,11 +50,11 @@ fps = 30  # atau ambil dari video asli
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 
 out_bg = cv2.VideoWriter(
-    "background_svdKANJUT.mp4", fourcc, fps, (W, H), isColor=False
+    "background_svdLLL.mp4", fourcc, fps, (W, H), isColor=False
 )
 
 out_fg = cv2.VideoWriter(
-    "foreground_svdKANJUT.mp4", fourcc, fps, (W, H), isColor=False
+    "foreground_svdLLL.mp4", fourcc, fps, (W, H), isColor=False
 )
 
 for i in range(T):
